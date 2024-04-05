@@ -1,0 +1,533 @@
+<html>
+
+  <head>
+  
+  <!-- you're not here theme by https://unixdaemon.tumblr.com/. don't steal or remove the credit. thanks. -->
+    
+  <title>{Title}</title>
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  {block:Description}
+        
+  <meta name="description" content="{MetaDescription}" />
+  
+  {/block:Description}
+        
+  <meta name="color:Background" content="" />
+  <meta name="color:Sidebar" content="" />
+  <meta name="color:Posts" content="" />
+  <meta name="color:Borders" content="" />
+  <meta name="color:Shadows" content="" />
+  <meta name="color:Navigation" content="" />
+  <meta name="color:Navigation Borders" content="" />
+  <meta name="color:Text" content="" />
+  <meta name="color:Text Shadow" content="" />
+  <meta name="color:Title" content="" />
+  <meta name="color:Title Shadow" content="" />
+  <meta name="color:Pages" content="" />
+  <meta name="color:Pages Shadow" content="" />
+  <meta name="color:Links" content="" />
+  <meta name="color:Links Shadow" content="" />
+  <meta name="color:Links Hover" content="" />
+  <meta name="color:Links Shadow Hover" content="" />
+  <meta name="color:Extra Links Shadow" content="" />
+  <meta name="color:Extra Links Left Shadow" content="" />
+  <meta name="color:Permalink Shadow" content="" />
+  <meta name="color:Tags Shadow" content="" />
+  <meta name="color:Blockquotes" content="" />
+  
+  <meta name="text:Link 1" content="" />
+  <meta name="text:Link 2" content="" />
+  <meta name="text:Link 3" content="" />
+  <meta name="text:Link 4" content="" />
+  <meta name="text:Link 5" content="" />
+  <meta name="text:Link 6" content="" />
+  <meta name="text:Link 1 Title" content="" />
+  <meta name="text:Link 2 Title" content="" />
+  <meta name="text:Link 3 Title" content="" />
+  <meta name="text:Link 4 Title" content="" />
+  <meta name="text:Link 5 Title" content="" />
+  <meta name="text:Link 6 Title" content="" />
+  <meta name="text:Custom Title" content=""/>
+    
+  <meta name="image:Background" content="" />
+  <meta name="image:Sidebar Image" content="" />
+  <meta name="image:Corner Image" content="" />
+  <meta name="image:Navigation Background" content="" />
+
+  <meta name="if:Borders" content="0"/>
+  <meta name="if:Navigation Borders" content="0"/>
+  <meta name="if:Links Shadow" content="0"/>
+  <meta name="if:Links Glow" content="0"/>
+  <meta name="if:Navigation Borders" content="0"/>
+  <meta name="if:Shadows" content="0"/>
+  <meta name="if:500px" content="0"/>
+  <meta name="if:700px" content="0"/>
+  <meta name="if:Extra Links" content="0"/>
+  <meta name="if:Extra Left Links" content="0"/>
+  <meta name="if:Title" content="0"/>
+  <meta name="if:Custom Title" content="0"/>
+  <meta name="if:Alternate Custom Title" content="0"/>
+
+
+        
+  <style type="text/css">
+  
+::-webkit-scrollbar {
+width: 10px;
+background: {color:Background}; 
+{block:ifBorders}border: 1px solid {color:Borders};{/block:ifBorders}
+}
+
+::-webkit-scrollbar-thumb {
+background: {color:Sidebar};
+{block:ifBorders}border: 1px solid {color:Borders};{/block:ifBorders}
+}
+
+body {
+background: {color:Background};
+background-image: url('{image:Background}');
+background-attachment: fixed;
+color: {color:Text};
+font-size: 16px;
+font-family: "Proza Libre", sans-serif;
+text-shadow: 1px 1px 3px {color:Text Shadow};
+} 
+
+a {
+text-decoration: none;
+color: {color:Links};
+{block:ifLinksShadow} text-shadow: 3px 4px {color:Links Shadow}; {/block:ifLinksShadow}
+{block:ifLinksGlow} text-shadow: 1px 1px 3px {color:Links Shadow}; {/block:ifLinksGlow}
+}
+
+a:hover {
+text-decoration: none;
+color: {color:Links Hover};
+{block:ifLinksShadow} text-shadow: 3px 4px {color:Links Shadow Hover}; {/block:ifLinksShadow}
+{block:ifLinksGlow} text-shadow: 1px 1px 3px {color:Links Shadow Hover}; {/block:ifLinksGlow}
+}
+
+blockquote { 
+padding-left: 5px;
+border-left: 1px solid {color:Blockquotes};
+}
+
+ul {
+list-style-type: upper-roman;
+}
+
+#title {
+color: {color:Title};
+text-shadow: 3px 4px {color:Links Shadow};
+font-size: 30px;
+word-break: break-all;
+}
+
+#label {
+color: {color:Title};
+text-shadow: 3px 4px {color:Title Shadow};
+font-size: 30px;
+word-break: break-all;
+}
+
+#dub {
+color: {color:Text};
+text-shadow: 1px 1px 3px {color:Text Shadow};
+font-size: 30px;
+word-break: break-all;
+}
+
+#sidebar {
+position: fixed;
+top: 45px;
+left: 150px;
+width: 400px;
+max-height: 100%;
+text-align: center;
+background: {color:Sidebar};
+padding: 15px;
+color: {color:Text};
+{block:ifBorders}border: 1px solid {color:Borders};{/block:ifBorders}
+{block:ifShadows}box-shadow: 0px 0px 5px {color:Posts};{/block:ifShadows}
+}
+    
+#sidebar .image {
+width: 375px;
+height: 300px;
+margin-top:10px;
+} 
+
+#description {
+width: 350px;
+margin-bottom: 10px;
+margin-left: 25px;
+text-align: center;
+word-break: break-all;
+}
+
+#navigation {
+position: center;
+margin-top: 25px;
+}
+
+#navigation a {
+margin: 2px;
+text-transform: capitalize;
+text-align:center;
+display: inline-block;
+padding: 5px;
+height: 75px;
+width: 75px;
+{block:ifNavigationBorders}border: 1px double {color:Navigation Borders};{block:ifNavigationBorders}
+background: {color:Navigation};
+background-image: url("{image:Navigation Background}");
+background-repeat:repeat;
+line-height: 75px;
+}
+
+#directory {
+position: center;
+margin-top: 10px;
+}
+
+#directory a {
+margin-left: 10px;
+text-transform: capitalize;
+box-shadow: inset 0px -0.50em 1px 0px {color:Extra Links Shadow};
+}
+
+#menu {
+float: left;
+margin-top: 0px;
+}
+
+#menu a {
+text-transform: capitalize;
+display:block;
+margin-top: 10px;
+margin-bottom: 10px;
+box-shadow: inset 0px -0.50em 0px 0px {color:Extra Links Left Shadow};
+}
+
+#container { 
+position: relative;   
+margin-top: 45px;
+margin-left: 680px;
+}
+
+#posts {
+{block:if500px} width: 500px; {/block:if500px}
+{block:if700px} width: 700px; {/block:if700px}
+padding: 15px;
+margin: 20px;
+background: {color:Posts};
+{block:ifBorders}border: 1px solid {color:Borders};{/block:ifBorders}
+{block:ifShadows}box-shadow: 0px 0px 5px {color:Posts};{/block:ifShadows}
+}
+
+img, embed, object { 
+text-align: center;
+max-width: 100%; 
+max-height: 100%;
+}
+
+figure {
+text-align: center;
+}
+
+iframe, video { 
+width:100%;
+}
+
+#permalink { 
+text-align: right;
+}
+
+#permalink a {
+margin: 10px;
+box-shadow: inset 0px -0.50em 1px 0px {color:Permalink Shadow};
+}
+
+#tags {
+margin-top: 5px;
+}
+
+#tags a {
+margin: 10px;
+box-shadow: inset 0px -0.50em 0px 0px {color:Tags Shadow};
+}
+
+#pages {
+font-size: 35px;
+padding-top: 10px;
+{block:ifExtraLeftLinks}margin-right: 30px;{/block:ifExtraLeftLinks}
+text-align: center;
+}
+
+#pages a {
+margin-left: 10px;
+color: {color:Pages};
+text-shadow: 1px 1px 10px {color:Pages Shadow};
+display: inline-block;
+}
+
+#pages a:hover {
+margin-left: 10px;
+-webkit-animation: bbounce linear 2.5s;
+-webkit-animation-iteration-count: infinite;
+-webkit-transform-origin: 50% 50%;
+}
+
+@keyframes bbounce{
+0% {transform:translate(0px,0px);}
+50% {transform:translate(10px,0px);}
+100% {transform:translate(0px, 0px);}
+}
+
+@-moz-keyframes bbounce{
+0% {-moz-transform:translate(0px,0px);}
+50% {-moz-transform:translate(0px,10px);}
+100% {-moz-transform:translate(0px,0px);}
+}
+
+@-webkit-keyframes bbounce {
+0% {-webkit-transform:translate(0px,0px);}
+50% {-webkit-transform:translate(0px,10px);}
+100% {-webkit-transform:translate(0px,0px);}
+}
+
+
+#corner { 
+position: fixed;
+bottom: 25px;
+right: 250px;
+z-index: -1;
+}  
+
+.box {
+position: absolute; 
+z-index: 1000;
+margin-top: 100px; 
+margin-left: 95px;}
+
+.play {
+width: 33px; 
+height: 30px; 
+overflow: hidden; 
+position: relative;
+z-index: 1000;
+margin-top: -90px;
+margin-left: -95px;
+}
+.cover {
+position:relative;
+margin-top:10px;
+margin-left:0px
+height: 150px;
+width: 150px;
+z-index: 0;
+} 
+
+.track {
+position:relative;
+text-align:center;
+text-transform:capitalize;}  
+
+.artist {
+text-align:center;
+text-transform:capitalize;
+}
+
+.album {
+text-align:center;
+text-transform:capitalize;
+}  
+
+ol.notes {
+list-style-type: none;
+}
+
+    </style>
+    </head>
+    
+    <body>
+    
+<div id="container">
+    
+{block:Posts} 
+    
+<div id="posts">
+
+{block:Text} 
+{block:Title} {Title} {/block:Title} {Body}
+{/block:Text}	
+
+{block:Answer}
+    <div class="question">
+        <div class="asker">{Asker} asked:</div>
+        <div class="asker-question">{Question}</div>
+    </div>
+
+    {block:Answerer}
+        <div class="answer">
+            <div class="answerer">{Answerer}</div>
+            <div class="answerer-answer">{Answer}</div>
+        </div>
+    {/block:Answerer}
+
+    {block:NotReblog}
+        {Replies}
+    {/block:NotReblog}
+{/block:Answer}
+
+{block:Photo}
+<div align="center">
+{block:if500px}<img src="{PhotoURL-500}" width="500px"/>{/block:if500px}
+
+{block:if700px}<img src="{PhotoURL-500}" width="700px"/>{/block:if700px}</div>
+{Caption} 
+{/block:Photo}
+
+{block:Photoset} 
+{block:if500px}<div align="center">{Photoset-500}</div>{/block:if500px}
+
+{block:if700px}<div align="center">{Photoset-700}</div>{/block:if700px}
+
+{Caption}
+{/block:Photoset}
+
+
+{block:Quote} 
+"{Quote}" {block:Source} <div class="source">─ {Source}</div> {/block:Source}
+{/block:Quote}
+
+
+{block:Link}
+<a href="{URL}" class="link" {Target}>{Name}</a> {Description}
+{/block:Link}
+
+
+{block:Chat}
+{block:Title}{Title}{/block:Title} <div>{block:Lines} <div>{block:Label}{Label}{/block:Label} {Line}</div>{/block:Lines}</div>
+{/block:Chat}
+
+    
+{block:Audio}
+{block:AudioPlayer}
+
+<div class="box"><div class="play">{block:AudioPlayer}{AudioPlayerBlack}{/block:AudioPlayer}</div></div>
+
+
+{block:AlbumArt}<img src="{AlbumArtURL}" class="cover"><br>{/block:AlbumArt}
+
+
+<div class=“track”>
+{block:TrackName}{TrackName}{/block:TrackName}
+</div>
+
+<div class=“artist”>
+{block:Artist}{Artist}{/block:Artist}
+</div>
+
+<div class=“album”>
+{block:Album}{Album}{/block:Album}
+</div>
+
+{block:Caption}{Caption}{/block:Caption}
+{/block:AudioPlayer}
+{/block:Audio}
+
+
+{block:Video} 
+{block:if500px}{Video-500}{Description}{/block:if500px} 
+
+{block:if700px}{Video-700}{Description}{/block:if700px}
+{/block:Video}
+
+
+
+{block:Date}
+<div id="permalink">
+
+<a href="{Permalink}">{TimeAgo}</a>{block:NoteCount}<a href="{Permalink}">{NoteCount}%</a>{/block:NoteCount}{block:RebloggedFrom}<a href="{ReblogParentURL}">via</a>{block:ContentSource}<a href="{ReblogRootURL}">source</a>{/block:ContentSource}{/block:RebloggedFrom}
+
+{block:HasTags}<div id="tags">{block:Tags}<a href="{TagUrl}">#{Tag}</a>{/block:Tags}</div>{/block:HasTags}
+
+</div>
+
+<div id="notes"> {block:PermalinkPage} {block:PostNotes} {PostNotes} {/block:PostNotes} {/block:PermalinkPage} </div>
+{/block:Date}
+
+   
+    </div>
+    
+    
+{block:ContentSource}
+<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"
+width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}"/>
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}   
+
+    
+    {/block:Posts}
+
+</div>
+     
+        
+    
+        <div id="sidebar"> 
+        
+        {block:ifTitle} <div id="title"> {Title} </div> {/block:ifTitle} 
+        
+        {block:ifCustomTitle} <div id="label"> {text:Custom Title} </div> {/block:ifCustomTitle} 
+        
+               {block:ifAlternateCustomTitle} <div id="dub"> {text:Custom Title} </div> {/block:ifAlternateCustomTitle} 
+        
+        <img class="image" src="{image:Sidebar Image}"/> 
+        
+                   <div id="navigation">
+<a href="/">home</a>
+<a href="/ask">ask</a>
+<a href="/archive">archive</a>
+<a href="https://unixdaemon.tumblr.com/">theme</a> 
+</div>
+
+
+                  {block:ifExtraLinks} <div id="directory">
+<a href="{text:Link 1}">{text:Link 1 Title}</a>
+<a href="{text:Link 2}">{text:Link 2 Title}</a>
+<a href="{text:Link 3}">{text:Link 3 Title}</a>
+</div> {/block:ifExtraLinks}
+
+                         {block:ifExtraLeftLinks} <div id="menu">
+<a href="{text:Link 4}">{text:Link 4 Title}</a>
+<a href="{text:Link 5}">{text:Link 5 Title}</a>
+<a href="{text:Link 6}">{text:Link 6 Title}</a>
+</div> {/block:ifExtraLeftLinks}
+        
+        
+        <br> <div id="description"> {Description}</div>
+        
+        
+          <div id="pages"> {block:PreviousPage}
+                <a href="{PreviousPage}">◁</a>
+            {/block:PreviousPage}
+            {block:NextPage}
+                <a href="{NextPage}">▷</a>
+                {/block:NextPage}
+         </div>  
+
+        
+         </div>
+         
+         <div id="corner"><img src="{image:Corner Image}"/></div>
+
+    </body>
+</html>
