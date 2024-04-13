@@ -89,6 +89,11 @@ background: {color:Sidebar};
 {block:ifBorders}border: 1px solid {color:Borders};{/block:ifBorders}
 }
 
+.pinned { 
+margin-left: 2px;
+margin-bottom: 12px; 
+}
+
 body {
 background: {color:Background};
 background-image: url('{image:Background}');
@@ -363,6 +368,9 @@ list-style-type: none;
 {block:Posts} 
     
 <div id="posts">
+
+{block:HomePage}{block:PinnedPostLabel}<div class="pinned">✘ Pinned</div>{/block:PinnedPostLabel} {/block:HomePage}
+
 
 {block:Text} 
 {block:Title} {Title} {/block:Title} {Body}
