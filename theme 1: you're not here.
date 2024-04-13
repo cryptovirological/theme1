@@ -369,7 +369,7 @@ list-style-type: none;
     
 <div id="posts">
 
-{block:HomePage}{block:PinnedPostLabel}<div class="pinned">✖ Pinned</div>{/block:PinnedPostLabel} {/block:HomePage}
+{block:HomePage}{block:PinnedPostLabel}<div class="pinned">✖Pinned</div>{/block:PinnedPostLabel} {/block:HomePage}
 
 
 {block:Text} 
