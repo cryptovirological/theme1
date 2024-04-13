@@ -131,21 +131,21 @@ list-style-type: upper-roman;
 color: {color:Title};
 text-shadow: 3px 4px {color:Links Shadow};
 font-size: 30px;
-word-break: break-all;
+word-break: break-word;
 }
 
 #label {
 color: {color:Title};
 text-shadow: 3px 4px {color:Title Shadow};
 font-size: 30px;
-word-break: break-all;
+word-break: break-word;
 }
 
 #dub {
 color: {color:Text};
 text-shadow: 1px 1px 3px {color:Text Shadow};
 font-size: 30px;
-word-break: break-all;
+word-break: break-word;
 }
 
 #sidebar {
@@ -173,7 +173,7 @@ width: 350px;
 margin-bottom: 10px;
 margin-left: 25px;
 text-align: center;
-word-break: break-all;
+word-break: break-word;
 }
 
 #navigation {
