@@ -204,7 +204,7 @@ margin-top: 10px;
 #directory a {
 margin-left: 10px;
 text-transform: capitalize;
-box-shadow: inset 0px -0.50em 1px 0px {color:Extra Links Shadow};
+box-shadow: inset 0px -0.50em 0px 0px {color:Extra Links Shadow};
 }
 
 #menu {
@@ -256,7 +256,7 @@ text-align: right;
 
 #permalink a {
 margin: 10px;
-box-shadow: inset 0px -0.50em 1px 0px {color:Permalink Shadow};
+box-shadow: inset 0px -0.50em 0px 0px {color:Permalink Shadow};
 }
 
 #tags {
@@ -330,6 +330,7 @@ z-index: 1000;
 margin-top: -90px;
 margin-left: -95px;
 }
+
 .cover {
 position:relative;
 margin-top:10px;
